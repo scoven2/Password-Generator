@@ -5,9 +5,13 @@ This is a random password generator that allows you to select the length, and ch
 
 ## How to use
 Press red "Generate Password" button
+
 Select the length of password between 8 and 128 characters
+
 Select OK to approve the specific type of variable for your password
+
 Select Cancel to skip
+
 Click textbox where password has been generated to copy password to clipboard.
 
 
