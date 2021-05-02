@@ -44,4 +44,15 @@ function generatePassword() {
         confirmUppercase = confirm("Will this contain Uppercase letters?");
         confirmLowercase = confirm("Will this contain Lowercase letters?")
     };
+    
+    // 4 no
+    if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
+        choices = alert("You must choose criteria");
+    }
+
+    //4 yes
+    else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
+        choices = character.concat(number, letter2);
+    }
+    
 }
