@@ -72,20 +72,20 @@ function generatePassword() {
     //2 yes and 2 no
     else if (confirmCharacter && confirmNumber) {
         choices = character.concat(number);
-    }
-    else if (confirmCharacter && confirmLowercase) {
+
+    } else if (confirmCharacter && confirmLowercase) {
         choices = character.concat(letter);
-    }
-    else if (confirmCharacter && confirmUppercase) {
+
+    } else if (confirmCharacter && confirmUppercase) {
         choices = character.concat(letter2);
     }
     else if (confirmLowercase && confirmNumber) {
         choices = letter.concat(number);
-    }
-    else if (confirmLowercase && confirmUppercase) {
+
+    } else if (confirmLowercase && confirmUppercase) {
         choices = letter.concat(letter2);
-    }
-    else if (confirmNumber && confirmUppercase) {
+
+    } else if (confirmNumber && confirmUppercase) {
         choices = number.concat(letter2);
     }
 
@@ -99,19 +99,19 @@ function generatePassword() {
     else if (confirmLowercase) {
         choices = letter;
     }
-    else if ( confirmUppercase) {
+    else if (confirmUppercase) {
         choices = space.concat(letter2);
     };
 
     let password = [];
     
     //randomized all variable
-    for (let i = 0; i < enter; i++) {
-        let pickChoices = choices[Math.floor(Math.random() * choices.length)];
+    for (var i = 0; i < enter; i++) {
+        var pickChoices = choices[Math.floor(Math.random() * choices.length)];
         password.push(pickChoices);
     }
 
-    let ps = password.join("");
+    var ps = password.join("");
     UserInput(ps);
     return ps;
 }
