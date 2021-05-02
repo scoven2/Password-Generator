@@ -102,4 +102,28 @@ function generatePassword() {
     else if ( confirmUppercase) {
         choices = space.concat(letter2);
     };
+
+    let password = [];
+    
+    //randomized all variable
+    for (let i = 0; i < enter; i++) {
+        let pickChoices = choices[Math.floor(Math.random() * choices.length)];
+        password.push(pickChoices);
+    }
+
+    let ps = password.join("");
+    UserInput(ps);
+    return ps;
+}
+
+//puts password in textbox
+function UserInput(ps) {
+    document.getElementById("password").textContent = ps;
+}
+
+//copies password when clicking on textbox
+document.getElementById("password").onclick = function() {
+    this.select();
+    document.execCommand("Copy");
+    alert("Password copied to clipboard!");
 }
