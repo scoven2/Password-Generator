@@ -16,7 +16,7 @@ Click textbox where password has been generated to copy password to clipboard.
 
 [Live link](https://scoven2.github.io/Professional-Portfolio/)
 
-![screenshot](/assets/images/Screenshot(3).png/)
+![screenshot](/assets/images/Screenshot.png)
 
 
 ## License:
