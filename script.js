@@ -55,7 +55,7 @@ function generatePassword() {
         choices = character.concat(number, letter2);
     }
 
-    //3 yes
+    //3 yes and 1 no
     else if (confirmCharacter && confirmNumber && confirmUppercase) {
         choices = character.concat(number, letter2);
     }
@@ -63,9 +63,29 @@ function generatePassword() {
         choices = character.concat(number, letter);
     }
     else if (confirmCharacter && confirmLowercase && confirmUppercase) {
-        choices = charactefr.concat(letter, letter2);
+        choices = character.concat(letter, letter2);
     }
     else if (confirmNumber && confirmLowercase && confirmUppercase) {
         choices = number.concat(letter, letter2);
+    }
+
+    //2 yes and 2 no
+    else if (confirmCharacter && confirmNumber) {
+        choices = character.concat(number);
+    }
+    else if (confirmCharacter && confirmLowercase) {
+        choices = character.concat(letter);
+    }
+    else if (confirmCharacter && confirmUppercase) {
+        choices = character.concat(letter2);
+    }
+    else if (confirmLowercase && confirmNumber) {
+        choice = letter.concat(number);
+    }
+    else if (confirmLowercase && confirmUppercase) {
+        choice = letter.concat(letter2);
+    }
+    else if (confirmNumber && confirmUppercase) {
+        choice = number.concat(letter2);
     }
 }
